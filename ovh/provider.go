@@ -203,6 +203,8 @@ func Provider() *schema.Provider {
 			"ovh_vps":                                                        dataSourceVPS(),
 			"ovh_vpss":                                                       dataSourceVPSs(),
 			"ovh_vracks":                                                     dataSourceVracks(),
+			"ovh_email_domain_account":                                       dataSourceEmailDomainAccount(),
+			"ovh_email_domain_accounts":                                      dataSourceEmailDomainAccounts(),
 		},
 
 		ResourcesMap: map[string]*schema.Resource{
@@ -306,6 +308,8 @@ func Provider() *schema.Provider {
 			"ovh_vrack_ipv6":                                                 resourceVrackIpV6(),
 			"ovh_vrack_iploadbalancing":                                      resourceVrackIpLoadbalancing(),
 			"ovh_vrack_vrackservices":                                        resourceVrackVrackServices(),
+			"ovh_email_domain_account":                                       resourceEmailDomainAccount(),
+			"ovh_email_pro_account":                                          resourceEmailProAccount(),
 		},
 
 		ConfigureContextFunc: ConfigureContextFunc,
