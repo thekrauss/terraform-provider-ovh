@@ -22,7 +22,7 @@ func TestAccDataEmailDomainAccounts_list(t *testing.T) {
 	cfg := fmt.Sprintf(`
 provider "ovh" {}
 
-# On crée deux boîtes
+# We create two boxes
 resource "ovh_email_domain_account" "a" {
   domain       = %q
   account_name = %q
@@ -39,7 +39,7 @@ resource "ovh_email_domain_account" "b" {
   size         = 5000000000
 }
 
-# On liste toutes les boîtes du domaine
+# We list all the boxes in the domain
 data "ovh_email_domain_accounts" "all" {
   domain = %q
 }
