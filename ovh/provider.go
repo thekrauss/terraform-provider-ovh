@@ -205,6 +205,7 @@ func Provider() *schema.Provider {
 			"ovh_vracks":                                                     dataSourceVracks(),
 			"ovh_email_domain_account":                                       dataSourceEmailDomainAccount(),
 			"ovh_email_domain_accounts":                                      dataSourceEmailDomainAccounts(),
+			"ovh_email_pro_account":                                          dataSourceEmailProAccount(),
 		},
 
 		ResourcesMap: map[string]*schema.Resource{
